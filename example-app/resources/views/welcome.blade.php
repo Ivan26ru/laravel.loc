@@ -1,16 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <style>
-        button.my-button {
-            width: 100%;
-            margin-top: 5px;
-        }
 
-        .gallery-item{
-            margin: 10px 0;
-        }
-    </style>
     <div class="container">
         <h1 align="center">My Gallery</h1>
         <div class="row">
