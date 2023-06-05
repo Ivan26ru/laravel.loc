@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <img src="/image.jpg" alt="" class="img-thumbnail gallery-image">
+                    <img src="/image.png" alt="" class="img-thumbnail gallery-image">
                 </div>
             </div>
         </div>

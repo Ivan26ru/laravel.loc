@@ -10,7 +10,7 @@
                 $i++) { ?>
             <div class="col-md-3 gallery-item">
                 <div>
-                    <img src="/image.jpg" alt="" class="img-thumbnail">
+                    <img src="/image.png" alt="" class="img-thumbnail">
                 </div>
                 <button type="button" class="my-button btn btn-info">Info</button>
                 <button type="button" class="my-button btn btn-warning">Warning</button>
