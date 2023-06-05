@@ -8,8 +8,9 @@
                 <img src="/image.png" alt="" class="img-thumbnail">
                 <form action="" method="post">
                     <div class="form-control">
-                        <input type="file" name="" id="">
+                        <input type="file" name="" id="" >
                     </div>
+                    <input type="submit" value="Edit" class="btn btn-warning">
                 </form>
             </div>
         </div>
