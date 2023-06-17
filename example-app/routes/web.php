@@ -30,8 +30,9 @@ Route::get('/create', function () {
 
 Route::post('/store', function (Request $request) {
     $image = $request->file('image');
-//        dd($image->getSize());
-    dd(get_class_methods($image));
+    //        dd($image->getSize());
+//    dd($image->store('uploads'));
+    dd($image->storeAs('uploads', "image.jpg"));
 });
 
 Route::get('/show', function () {
