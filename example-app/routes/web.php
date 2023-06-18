@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,16 +30,13 @@ Route::get('/create', function () {
 });
 
 Route::post('/store', function (Request $request) {
-//    $image = $request->file('image');
-    $request->image->storeAs('uploads', "image2.jpg");
-    //        dd($image->getSize());
-//    $filename = $image->store('uploads');
-
-    //    dd($image->storeAs('uploads', "image.jpg"));
-
-//    $users = DB::table('users')
-    //        ->select('name', 'email as user_email')
-    //        ->get();
+    $filename = $request->image->store('uploads');
+    dd(DB::table('images')->insert(
+        [
+            'image' => $filename
+        ]
+    )
+    );
 });
 
 Route::get('/show', function () {
