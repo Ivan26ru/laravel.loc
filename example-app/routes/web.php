@@ -22,7 +22,7 @@ Route::get('/', function () {
         ->select('*')
         ->get();
 
-    dd($images);
+    dd($images->pluck('image'));
 
     return view('welcome');
 });
