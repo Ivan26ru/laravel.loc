@@ -18,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $images = DB::table('images')
+        ->select('*')
+        ->get();
+
+    dd($images);
+
     return view('welcome');
 });
 
