@@ -22,9 +22,9 @@ Route::get('/', function () {
         ->select('*')
         ->get();
 
-    dd($images->pluck('image'));
+    $myImages = $images->pluck('image')->all();
 
-    return view('welcome');
+    return view('welcome', ['imagesInView' => $myImages]);
 });
 
 Route::get('/about', function () {
