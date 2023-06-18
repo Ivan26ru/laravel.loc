@@ -31,12 +31,14 @@ Route::get('/create', function () {
 
 Route::post('/store', function (Request $request) {
     $filename = $request->image->store('uploads');
-    dd(DB::table('images')->insert(
+    DB::table('images')->insert(
         [
             'image' => $filename
         ]
-    )
     );
+
+
+    return redirect('/');
 });
 
 Route::get('/show', function () {
