@@ -10,7 +10,7 @@
                         <img src="{{$image->image}}" alt="" class="img-thumbnail">
                     </div>
                     <a href="/show/{{$image->id}}" type="button" class="my-button btn btn-info">Show</a>
-                    <a href="/edit" type="button" class="my-button btn btn-warning">Edit</a>
+                    <a href="/edit/{{$image->id}}" type="button" class="my-button btn btn-warning">Edit</a>
                     <a href="#" type="button" class="my-button btn btn-danger">Delete</a>
                 </div>
             @endforeach
