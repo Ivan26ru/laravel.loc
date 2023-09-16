@@ -1,11 +1,12 @@
 @extends('layout')
 
 @section('content')
+{{--    {{dd($imageInView)}}--}}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <img src="/image.png" alt="" class="img-thumbnail gallery-image">
+                    <img src="/{{$imageInView}}" alt="" class="img-thumbnail gallery-image">
                 </div>
             </div>
         </div>
