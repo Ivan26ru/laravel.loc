@@ -14,19 +14,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::controller(ImagesController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::get('/create', 'create');
+    Route::post('/store', 'store');
+    Route::get('/show/{id}', 'show');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update/{id}', 'update');
+    Route::get('/delete/{id}', 'delete');
+});
 
-Route::get('/', [ImagesController::class, 'index']);
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/about', 'about');
+});
 
-Route::get('/about', [HomeController::class, 'about']);
 
-Route::get('/create', [ImagesController::class, 'create']);
 
-Route::post('/store', [ImagesController::class, 'store']);
 
-Route::get('/show/{id}', [ImagesController::class, 'show']);
 
-Route::get('/edit/{id}', [ImagesController::class, 'edit']);
-
-Route::post('/update/{id}', [ImagesController::class, 'update']);
-
-Route::get('/delete/{id}', [ImagesController::class, 'delete']);
