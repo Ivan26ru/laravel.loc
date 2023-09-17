@@ -21,8 +21,7 @@
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="/create">Add image</a></li>
-                <li class="nav-item"><a class="nav-link" href="/show">Show</a></li>
-                <li class="nav-item"><a class="nav-link" href="/edit">Edit</a></li>
+                <li class="nav-item"><a class="nav-link" href="/page">Page</a></li>
             </ul>
         </div>
     </div>

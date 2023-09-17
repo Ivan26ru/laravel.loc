@@ -28,6 +28,11 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/about', 'about');
 });
 
+Route::get('/page', [ImagesController::class, 'page']);
+Route::get('/page/{id}', [ImagesController::class, 'page']);
+
+
+
 
 
 

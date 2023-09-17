@@ -47,4 +47,8 @@ class ImagesController extends Controller
         $this->images->delete($id);
         return redirect('/');
     }
+
+    public function page($id = 'no id') {
+        return view('page', ['id' => $id]);
+    }
 }
