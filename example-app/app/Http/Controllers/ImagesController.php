@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Services\ImageService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
 
 class ImagesController extends Controller
 {
@@ -26,44 +24,27 @@ class ImagesController extends Controller
     }
 
     public function store(Request $request) {
-        $filename = $request->image->store('uploads');
-        DB::table('images')->insert(
-            [
-                'image' => $filename
-            ]
-        );
-        return redirect('/');
+        $image = $request->file('image');
 
+        $this->images->add($image);
+        return redirect('/');
     }
 
     public function show($id) {
-        $image   = DB::table('images')->select("*")->where("id", $id)->first();
-        $myImage = $image->image;
-        return view('show', ['imageInView' => $myImage]);
+        return view('show', ['imageInView' => $this->images->one($id)->image()]);
     }
 
     public function edit($id) {
-        $image = DB::table('images')->select("*")->where("id", $id)->first();
-        return view('edit', ['imageInView' => $image]);
+        return view('edit', ['imageInView' => $this->images->one($id)]);
     }
 
     public function update(Request $request, $id) {
-        $image = DB::table('images')->select("*")->where('id', $id)->first();
-        Storage::delete($image->image);
-
-        $filename = $request->image->store('uploads');
-        DB::table('images')
-            ->where('id', $id)
-            ->update(['image' => $filename]);
-
+        $this->images->update($id, $request);
         return redirect("/");
     }
 
     public function delete($id) {
-        $image = DB::table('images')->select("*")->where('id', $id)->first();
-        Storage::delete($image->image);
-
-        DB::table('images')->where('id', $id)->delete();
+        $this->images->delete($id);
         return redirect('/');
     }
 }
