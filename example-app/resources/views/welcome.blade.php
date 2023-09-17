@@ -11,7 +11,7 @@
                     </div>
                     <a href="/show/{{$image->id}}" type="button" class="my-button btn btn-info">Show</a>
                     <a href="/edit/{{$image->id}}" type="button" class="my-button btn btn-warning">Edit</a>
-                    <a href="#" type="button" class="my-button btn btn-danger">Delete</a>
+                    <a href="/delete/{{$image->id}}" type="button" class="my-button btn btn-danger">Delete</a>
                 </div>
             @endforeach
         </div>
