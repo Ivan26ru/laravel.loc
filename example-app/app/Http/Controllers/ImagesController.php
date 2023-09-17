@@ -2,24 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ImagesController extends Controller
 {
+    private $images;
+
+    public function __construct(ImageService $imageService) {
+        $this->images = $imageService;
+    }
+
+
     public function index() {
-        $images   = DB::table('images')
-            ->select('*')
-            ->get();
-        $myImages = $images->all();
-        return view('welcome', ['imagesInView' => $myImages]);
+        return view('welcome', ['imagesInView' => $this->images->all()]);
     }
 
 
     public function create() {
         return view('create');
-
     }
 
     public function store(Request $request) {
