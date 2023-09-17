@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ImagesController::class, 'index']);
 
-Route::get('/about', [ImagesController::class, 'about']);
+Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/create', [ImagesController::class, 'create']);
 
