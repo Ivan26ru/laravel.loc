@@ -2,20 +2,26 @@
 
 namespace App\Services;
 
+use App\Repositories\ImagesRepository;
+use App\Repositories\interfaces\ImagesRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ImageService
 {
+    private ImagesRepository $imagesRepository;
+
+    public function __construct(ImagesRepository $imagesRepository) {
+        $this->imagesRepository = $imagesRepository;
+    }
+
+
     /**
      * Взять все картинки
      * @return array
      */
     public function all() {
-        $images = DB::table('images')
-            ->select('*')
-            ->get();
-        return $images->all();
+        return $this->imagesRepository->getAll();
     }
 
     /**
