@@ -31,6 +31,11 @@ Route::controller(HomeController::class)->group(function () {
 Route::get('/page', [ImagesController::class, 'page']);
 Route::get('/page/{id}', [ImagesController::class, 'page']);
 
+Route::get('/test', function (Request $request) {
+    dd($request->has("id"));
+
+});
+
 
 
 
