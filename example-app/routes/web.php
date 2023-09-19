@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +25,6 @@ Route::controller(ImagesController::class)->group(function () {
     Route::get('/delete/{id}', 'delete');
 });
 
-Route::controller(HomeController::class)->group(function () {
-    Route::get('/about', 'about');
-});
 
 Route::get('/page', [ImagesController::class, 'page']);
 Route::get('/page/{id}', [ImagesController::class, 'page']);
@@ -35,12 +33,24 @@ Route::get('/test', function (Request $request) {
     dd($request->has("id"));
 });
 
-Route::get('/validate', [ImagesController::class, 'validateForm']);
+Route::get('/validate', [ImagesController::class, 'validateForm'])->middleware('auth');;
+
+Route::middleware('admin')->group(function () {
+
+    Route::controller(HomeController::class)->group(function () {
+        Route::get('/about', 'about');
+    });
+
+});
 
 Route::post('/validate/check', [ImagesController::class, 'check']);
 
 
+Route::middleware('auth')->group(function () {
+    Route::get('/page/middleware', [ImagesController::class, 'page']);
+});
 
+Route::get('/page/login', [ImagesController::class, 'page'])->name('login');
 
 
 
