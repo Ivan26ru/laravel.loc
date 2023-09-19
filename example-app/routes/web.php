@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::controller(ImagesController::class)->group(function () {
+    abort('404');
     Route::get('/', 'index');
     Route::get('/create', 'create');
     Route::post('/store', 'store');
