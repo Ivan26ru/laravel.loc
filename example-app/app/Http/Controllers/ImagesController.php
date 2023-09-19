@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\ImageService;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class ImagesController extends Controller
 {
@@ -51,4 +52,20 @@ class ImagesController extends Controller
     public function page($id = 'no id') {
         return view('page', ['id' => $id]);
     }
+
+    public function validateForm() {
+        return view('validate');
+    }
+
+    public function check(Request $request) {
+        $title = $request->old('title');
+        $this->validate($request, [
+            'title' => 'required',
+            'desc'  => 'required',
+        ]);
+
+        dd($request->all());
+    }
+
+
 }

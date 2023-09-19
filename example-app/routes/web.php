@@ -33,8 +33,13 @@ Route::get('/page/{id}', [ImagesController::class, 'page']);
 
 Route::get('/test', function (Request $request) {
     dd($request->has("id"));
-
 });
+
+Route::get('/validate', [ImagesController::class, 'validateForm']);
+
+Route::post('/validate/check', [ImagesController::class, 'check']);
+
+
 
 
 
