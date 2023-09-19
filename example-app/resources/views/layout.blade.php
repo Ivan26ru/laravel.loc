@@ -24,6 +24,8 @@
                 <li class="nav-item"><a class="nav-link" href="/page">Page</a></li>
                 <li class="nav-item"><a class="nav-link" href="/validate">Validate</a></li>
                 <li class="nav-item"><a class="nav-link" href="/page/middleware">Middleware</a></li>
+                <li class="nav-item"><a class="nav-link" href="/404">404</a></li>
+                <li class="nav-item"><a class="nav-link" href="/collections">Collections</a></li>
             </ul>
         </div>
     </div>

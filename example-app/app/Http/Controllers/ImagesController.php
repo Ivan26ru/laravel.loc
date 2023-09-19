@@ -67,5 +67,9 @@ class ImagesController extends Controller
         dd($request->all());
     }
 
+    public function collection() {
+        return view('collection');
+    }
+
 
 }

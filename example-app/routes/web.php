@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::controller(ImagesController::class)->group(function () {
-    abort('404');
     Route::get('/', 'index');
     Route::get('/create', 'create');
     Route::post('/store', 'store');
@@ -53,8 +52,12 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/page/login', [ImagesController::class, 'page'])->name('login');
 
+Route::get('/404', function (){
+    abort('404');
+});
 
 
+Route::get('/collections', [ImagesController::class, 'collection']);
 
 
 
