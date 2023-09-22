@@ -1,3 +1,5 @@
+<?php use Symfony\Component\VarDumper\VarDumper;
+?>
 @extends('layout')
 
 @section('content')
@@ -30,7 +32,7 @@
 		return $user['id'] > 1;
 	});
 
-	dd($names);
+    VarDumper::dump($names);
 	?>
 
 @endsection

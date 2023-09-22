@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\WorksController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
@@ -25,39 +26,28 @@ Route::controller(ImagesController::class)->group(function () {
     Route::get('/delete/{id}', 'delete');
 });
 
+Route::controller(WorksController::class)->group(function () {
+    Route::get('/page', 'page');
+    Route::get('/page/{id}', 'page');
+    Route::get('/test', 'test');
+    Route::post('/validate/check', 'check');
+    Route::get('/collections', 'collection');
+    Route::get('/log-in', 'login')->name('login');
 
-Route::get('/page', [ImagesController::class, 'page']);
-Route::get('/page/{id}', [ImagesController::class, 'page']);
 
-Route::get('/test', function (Request $request) {
-    dd($request->has("id"));
-});
-
-Route::get('/validate', [ImagesController::class, 'validateForm'])->middleware('auth');;
-
-Route::middleware('admin')->group(function () {
-
-    Route::controller(HomeController::class)->group(function () {
-        Route::get('/about', 'about');
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/validate', 'validateForm');
+        Route::get('/page/middleware', 'page');
     });
-
-});
-
-Route::post('/validate/check', [ImagesController::class, 'check']);
-
-
-Route::middleware('auth')->group(function () {
-    Route::get('/page/middleware', [ImagesController::class, 'page']);
-});
-
-Route::get('/page/login', [ImagesController::class, 'page'])->name('login');
-
-Route::get('/404', function (){
-    abort('404');
 });
 
 
-Route::get('/collections', [ImagesController::class, 'collection']);
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/404', 'error404');
+    Route::get('/about', 'about');
 
 
-
+    Route::middleware('admin')->group(function () {
+        Route::get('/page_admin', 'page_admin');
+    });
+});

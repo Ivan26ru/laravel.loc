@@ -26,6 +26,8 @@
                 <li class="nav-item"><a class="nav-link" href="/page/middleware">Middleware</a></li>
                 <li class="nav-item"><a class="nav-link" href="/404">404</a></li>
                 <li class="nav-item"><a class="nav-link" href="/collections">Collections</a></li>
+                <li class="nav-item"><a class="nav-link" href="/log-in">Log-in</a></li>
+                <li class="nav-item"><a class="nav-link" href="/page_admin">page_admin</a></li>
             </ul>
         </div>
     </div>
