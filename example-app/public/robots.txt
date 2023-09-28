@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+host: https://navicity.ru
