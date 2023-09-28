@@ -28,6 +28,7 @@
                 <li class="nav-item"><a class="nav-link" href="/collections">Collections</a></li>
                 <li class="nav-item"><a class="nav-link" href="/log-in">Log-in</a></li>
                 <li class="nav-item"><a class="nav-link" href="/page_admin">page_admin</a></li>
+                <li class="nav-item"><a class="nav-link" href="/eloquent">eloquent</a></li>
             </ul>
         </div>
     </div>

@@ -38,6 +38,9 @@ class WorksController extends Controller
     public function login() {
         return view('login');
     }
+    public function eloquent() {
+        return view('eloquent');
+    }
 
     public function page_admin() {
         return view('login');

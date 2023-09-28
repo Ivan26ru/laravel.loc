@@ -34,6 +34,7 @@ Route::controller(WorksController::class)->group(function () {
     Route::get('/collections', 'collection');
     Route::get('/log-in', 'login')->name('login');
 
+    Route::get('/eloquent', 'eloquent');
 
     Route::middleware(['auth'])->group(function () {
         Route::get('/validate', 'validateForm');
