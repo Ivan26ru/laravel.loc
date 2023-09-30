@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Posts;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class WorksController extends Controller
@@ -39,7 +41,10 @@ class WorksController extends Controller
         return view('login');
     }
     public function eloquent() {
-        return view('eloquent');
+
+dd(Posts::all());
+
+//        return view('eloquent');
     }
 
     public function page_admin() {
