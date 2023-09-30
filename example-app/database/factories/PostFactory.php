@@ -16,13 +16,13 @@ class PostFactory extends Factory
      */
     public function definition(): array {
         return [
-            'title'   => fake()->title(),
-            'slug'    => fake()->slug,
+            'title'   => fake()->sentence(3),
+            'slug'    => fake()->slug(2),
             'content' => fake()->text(),
             'date'    => fake()->date(),
             'image'   => fake()->image(),
-            'status'  => rand(0,1),
-            'user_id' => rand(1,20),
+            'status'  => rand(0, 1),
+            'user_id' => rand(1, 20),
         ];
     }
 }

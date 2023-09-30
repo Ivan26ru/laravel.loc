@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Posts;
+use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;use function Symfony\Component\String\u;
+use Illuminate\Database\Seeder;
 
 class PostsTableSeeder extends Seeder
 {
@@ -13,6 +13,6 @@ class PostsTableSeeder extends Seeder
      */
     public function run(): void
     {
-
+        Post::factory(3)->create();
     }
 }
