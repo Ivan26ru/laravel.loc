@@ -16,7 +16,8 @@ class PostController extends Controller
         //        dd($posts->user);
 
         $user = User::find(7);
-        dd($user->post()->get());
+
+        $posts = $user->post()->orderBy('id','desc')->get();
 
         //        $user = User::find(7);
         //        dd($user->post()->get());

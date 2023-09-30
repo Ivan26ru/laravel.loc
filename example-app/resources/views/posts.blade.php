@@ -5,13 +5,13 @@
     <ol>
         @foreach($posts as $post)
             <li>
-                <h3>{{$post->title}}</h3>
+                <h3><u>{{$post->id}}</u> - {{$post->title}}</h3>
                 <p>
                     {{$post->content}}
                 </p>
             </li>
         @endforeach
     </ol>
-{{$posts->links()}}
+{{--{{$posts->links()}}--}}
 {{--    {{$posts->links('pagination::bootstrap-5')}}--}}
 @endsection
