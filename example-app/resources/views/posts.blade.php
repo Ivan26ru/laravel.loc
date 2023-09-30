@@ -13,4 +13,5 @@
         @endforeach
     </ol>
 {{$posts->links()}}
+{{--    {{$posts->links('pagination::bootstrap-5')}}--}}
 @endsection

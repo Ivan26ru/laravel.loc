@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function posts() {
-        $posts = Post::paginate(4);
+        $posts = Post::paginate(5);
+//        $posts = Post::simplePaginate(5);
         return view('posts', ['posts'=> $posts]);
     }
 
