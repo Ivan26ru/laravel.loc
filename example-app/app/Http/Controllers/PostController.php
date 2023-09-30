@@ -17,8 +17,10 @@ class PostController extends Controller
 
         $user = User::find(7);
 
-        $posts = $user->post()->orderBy('id','desc')->get();
+        $posts = $user->post()->orderBy('id', 'desc')->get();
 
+        $posts = $posts->pluck('title', 'id')->all();
+        dd($posts);
         //        $user = User::find(7);
         //        dd($user->post()->get());
         return view('posts', ['posts' => $posts]);
