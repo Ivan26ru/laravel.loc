@@ -3,7 +3,7 @@
 @section('content')
     <h1>Eloquent</h1>
     @php
-    use App\Models\Posts;
-        dd(Posts::all())
+    use App\Models\Post;
+        dd(Post::where('id', 6)->get());
     @endphp
 @endsection

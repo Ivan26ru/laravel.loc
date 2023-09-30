@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="/css/style.css" rel="stylesheet" >
 
-    <title>Document</title>
+    <title>Laravel</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -29,6 +29,7 @@
                 <li class="nav-item"><a class="nav-link" href="/log-in">Log-in</a></li>
                 <li class="nav-item"><a class="nav-link" href="/page_admin">page_admin</a></li>
                 <li class="nav-item"><a class="nav-link" href="/eloquent">eloquent</a></li>
+                <li class="nav-item"><a class="nav-link" href="/posts">Posts</a></li>
             </ul>
         </div>
     </div>

@@ -42,9 +42,9 @@ class WorksController extends Controller
     }
     public function eloquent() {
 
-dd(Posts::all());
+//dd(Posts::all());
 
-//        return view('eloquent');
+        return view('eloquent');
     }
 
     public function page_admin() {

@@ -52,3 +52,8 @@ Route::controller(HomeController::class)->group(function () {
         Route::get('/page_admin', 'page_admin');
     });
 });
+
+
+Route::controller(PostController::class)->group(function () {
+    Route::get('/posts', 'posts');
+});
