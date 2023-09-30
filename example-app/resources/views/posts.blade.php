@@ -12,4 +12,5 @@
             </li>
         @endforeach
     </ol>
+{{$posts->links()}}
 @endsection
