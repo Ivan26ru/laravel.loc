@@ -23,6 +23,8 @@ class PostController extends Controller
         dd($posts);
         //        $user = User::find(7);
         //        dd($user->post()->get());
+
+        
         return view('posts', ['posts' => $posts]);
     }
 
