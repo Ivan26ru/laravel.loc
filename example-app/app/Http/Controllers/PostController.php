@@ -20,12 +20,21 @@ class PostController extends Controller
         $posts = $user->post()->orderBy('id', 'desc')->get();
 
         $posts = $posts->pluck('title', 'id')->all();
-        dd($posts);
+
+        $post = Post::find(4);
+
+        echo "<pre>";
+
+        print_r($post->comments);
+        foreach ($post->comments as $comment) {
+            print_r($comment);
+        }
+//        dd($post);
         //        $user = User::find(7);
         //        dd($user->post()->get());
 
-        
-        return view('posts', ['posts' => $posts]);
+
+//        return view('posts', ['posts' => $posts]);
     }
 
 

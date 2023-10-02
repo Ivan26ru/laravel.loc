@@ -14,6 +14,6 @@ class CommentTableSeeder extends Seeder
     public function run(): void
     {
         //
-        Comment::factory(10)->create();
+        Comment::factory(3)->create(['commentable_type'=>'App\Model\Video']);
     }
 }
