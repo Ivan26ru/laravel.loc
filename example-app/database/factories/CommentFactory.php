@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,8 +19,8 @@ class CommentFactory extends Factory
         return [
             'body'             => fake()->word(),
             'commentable_id'   => 1,
-            'commentable_type' => 'App\Model\Post',
-            'user_id'          => rand(1,20),
+            'commentable_type' => Post::class,
+            'user_id'          => rand(1,10),
         ];
     }
 }

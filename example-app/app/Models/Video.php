@@ -10,8 +10,12 @@ class Video extends Model
 {
     use HasFactory;
 
+    /**
+     * Get all of the video's comments.
+     */
     public function comments(): MorphMany
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
+
 }

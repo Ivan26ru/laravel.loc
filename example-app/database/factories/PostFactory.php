@@ -22,7 +22,7 @@ class PostFactory extends Factory
             'date'    => fake()->date(),
             'image'   => fake()->image(),
             'status'  => rand(0, 1),
-            'user_id' => rand(1, 20),
+            'user_id' => rand(1, 4),
         ];
     }
 }

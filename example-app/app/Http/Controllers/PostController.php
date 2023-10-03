@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -21,20 +23,17 @@ class PostController extends Controller
 
         $posts = $posts->pluck('title', 'id')->all();
 
-        $post = Post::find(4);
+        $post  = Post::find(1);
+        $video = Video::find(1);
+        dd($video->comments);
+        dd($post->comments);
 
-        echo "<pre>";
-
-        print_r($post->comments);
-        foreach ($post->comments as $comment) {
-            print_r($comment);
-        }
-//        dd($post);
+        //        dd($post);
         //        $user = User::find(7);
         //        dd($user->post()->get());
 
 
-//        return view('posts', ['posts' => $posts]);
+        //        return view('posts', ['posts' => $posts]);
     }
 
 

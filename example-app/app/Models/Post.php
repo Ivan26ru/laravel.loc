@@ -17,7 +17,11 @@ class Post extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-    public function comments(): MorphMany {
+    /**
+     * Get all of the post's comments.
+     */
+    public function comments(): MorphMany
+    {
         return $this->morphMany(Comment::class, 'commentable');
     }
 }

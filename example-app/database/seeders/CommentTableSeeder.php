@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Comment;
+use App\Models\Video;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,8 @@ class CommentTableSeeder extends Seeder
     public function run(): void
     {
         //
-        Comment::factory(3)->create(['commentable_type'=>'App\Model\Video']);
+        Comment::factory(10)->create(
+//            ['commentable_type'=>Video::class]
+        );
     }
 }
