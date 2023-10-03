@@ -31,6 +31,7 @@
                 <li class="nav-item"><a class="nav-link" href="/eloquent">eloquent</a></li>
                 <li class="nav-item"><a class="nav-link" href="/posts">Posts</a></li>
                 <li class="nav-item"><a class="nav-link" href="/new_post">New_post</a></li>
+                <li class="nav-item"><a class="nav-link" href="/edit_post">Edit_post</a></li>
             </ul>
         </div>
     </div>

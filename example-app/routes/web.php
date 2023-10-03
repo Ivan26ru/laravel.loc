@@ -57,4 +57,5 @@ Route::controller(HomeController::class)->group(function () {
 Route::controller(PostController::class)->group(function () {
     Route::get('/posts', 'posts');
     Route::get('/new_post', 'new_post');
+    Route::get('/edit_post', 'edit_post');
 });
