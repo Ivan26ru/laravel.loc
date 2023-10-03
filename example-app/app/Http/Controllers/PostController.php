@@ -37,4 +37,7 @@ class PostController extends Controller
     }
 
 
+    public function new_post() {
+        return view('new_post');
+    }
 }

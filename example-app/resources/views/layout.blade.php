@@ -30,6 +30,7 @@
                 <li class="nav-item"><a class="nav-link" href="/page_admin">page_admin</a></li>
                 <li class="nav-item"><a class="nav-link" href="/eloquent">eloquent</a></li>
                 <li class="nav-item"><a class="nav-link" href="/posts">Posts</a></li>
+                <li class="nav-item"><a class="nav-link" href="/new_post">New_post</a></li>
             </ul>
         </div>
     </div>
