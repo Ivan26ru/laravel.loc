@@ -24,4 +24,10 @@ class Post extends Model
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
+
+//    public $fillable = ["title"];//эти поля могут быть заполнены
+    public $guarded=[];// какие поля защищены, если пустое, то все доступны
+
+//    public $table ="post";//указать произвольную таблицу
+
 }
